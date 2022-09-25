@@ -14,8 +14,8 @@ class GameObject:
             self.pos.left = 0
 
 screen = pygame.display.set_mode((640, 480))
-player = pygame.image.load('player1.gif').convert()
-background = pygame.image.load('background.gif').convert()
+player = pygame.image.load('assets/player1.gif').convert()
+background = pygame.image.load('assets/background.gif').convert()
 screen.blit(background, (0, 0))
 objects = []
 for x in range(10):                    #create 10 objects</i>

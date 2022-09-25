@@ -7,7 +7,7 @@ black = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
 
-ball = pygame.image.load("bee.png")
+ball = pygame.image.load("assets/bee.png")
 ballrect = ball.get_rect()
 
 while 1:
