@@ -4,10 +4,11 @@ import pygame
 pygame.init()
 
 size = width, height = 640, 480
-gravity = 0.4
-speed = [1,2]
+gravity = 2
+speed = [0,gravity]
 black = 0, 0, 0
 
+bg_surface = pygame.image.load("assets/gamebackground.jpg")
 
 game_active = True
 ball_movement = 0
@@ -28,7 +29,10 @@ while 1:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 speed = [1, -3]
+
+
     ballrect = ballrect.move(speed)
+
     if ballrect.left < 0 or ballrect.right > width:
         speed[0] = -speed[0]
     if ballrect.top < 0:
@@ -40,6 +44,7 @@ while 1:
 
     clock.tick(60)
     screen.fill(black)
+    screen.blit(bg_surface, (0,0))
     screen.blit(ball, ballrect)
     pygame.display.flip()
 
